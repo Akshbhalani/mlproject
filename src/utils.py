@@ -13,6 +13,7 @@ def save_object(file_path, obj):
         
         # Create the directory if it doesn't exist
         os.makedirs(dir_path, exist_ok=True)
+
         
         # Save the object to the specified file path
         with open(file_path, "wb") as file_obj:
