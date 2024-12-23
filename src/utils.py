@@ -20,28 +20,10 @@ def save_object(file_path, obj):
             dill.dump(obj, file_obj)
     except Exception as e: 
         raise CustomException(e, sys)
+    
 
 
-
-
-# -------> Another save_object function
-# def save_object(file_path, obj):
-#     try:
-#         dir_path = os.path.dirname(file_path)
-#         os.makedirs(dir_path, exist_ok=True)
-
-#         # Explicitly check file access
-#         with open(file_path, 'wb') as file_obj:
-#             pickle.dump(obj, file_obj)
-#             logging.info(f"Object successfully saved at {file_path}")
-#     except PermissionError as pe:
-#         logging.error(f"Permission denied: {pe}")
-#         raise CustomException(pe, sys)
-#     except Exception as e:
-#         raise CustomException(e, sys)
-
-
-
+# model evaluation
 def evaluate_models(X_train, y_train, X_test, y_test, models):
     try:
         report = {}
