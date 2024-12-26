@@ -42,7 +42,7 @@ class CustomData:
         self.writing_score = writing_score
 
 
-
+# save data as dataframe
     def get_data_as_data_frame(self):
         try:
             custom_data_input_dict = {
